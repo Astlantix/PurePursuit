@@ -1,34 +1,3 @@
-// ---- START VEXCODE CONFIGURED DEVICES ----
-// Robot Configuration:
-// [Name]               [Type]        [Port(s)]
-// Controller1          controller                    
-// GPS11                gps           11              
-// fl                   motor         1               
-// fr                   motor         7               
-// bl                   motor         10              
-// br                   motor         3               
-// ---- END VEXCODE CONFIGURED DEVICES ----
-// ---- START VEXCODE CONFIGURED DEVICES ----
-// Robot Configuration:
-// [Name]               [Type]        [Port(s)]
-// Controller1          controller                    
-// GPS11                gps           11              
-// fl                   motor         1               
-// fr                   motor         7               
-// bl                   motor         10              
-// br                   motor         3               
-// EncoderA             encoder       A, B            
-// ---- END VEXCODE CONFIGURED DEVICES ----
-// ---- START VEXCODE CONFIGURED DEVICES ----
-// Robot Configuration:
-// [Name]               [Type]        [Port(s)]
-// Controller1          controller                    
-// GPS11                gps           11              
-// fl                   motor         1               
-// fr                   motor         7               
-// bl                   motor         10              
-// br                   motor         3               
-// ---- END VEXCODE CONFIGURED DEVICES ----
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
@@ -50,6 +19,7 @@
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 #include "vex.h"
+//change to "odomgps.hpp" if you are using a gps sensor and make sure it is configured properly
 #include "odometry.hpp"
 using namespace vex;
 
@@ -126,8 +96,9 @@ void usercontrol(void) {
 //
 int main() {
   // Set up callbacks for autonomous and driver control periods.
- /Competition.autonomous(autonomous);
+  Competition.autonomous(autonomous);
   Competition.drivercontrol(usercontrol);
+  odometry();
 
   // Run the pre-autonomous function.
   pre_auton();
