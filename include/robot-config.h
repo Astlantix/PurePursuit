@@ -9,7 +9,8 @@ extern motor fr;
 extern motor bl;
 extern motor br;
 extern gps GPST;
-extern inertial Inertial;
+extern encoder xpos;
+extern encoder ypos;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.

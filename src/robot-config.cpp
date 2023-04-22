@@ -14,8 +14,8 @@ motor fr = motor(PORT7, ratio18_1, false);
 motor bl = motor(PORT10, ratio18_1, true);
 motor br = motor(PORT3, ratio18_1, false);
 gps GPST = gps(PORT13, 0.00, 0.00, mm, 180);
-inertial Inertial = inertial(PORT14);
-
+encoder xpos = encoder(Brain.ThreeWirePort.A);
+encoder ypos = encoder(Brain.ThreeWirePort.C);
 // VEXcode generated functions
 // define variable for remote controller enable/disable
 bool RemoteControlCodeEnabled = true;
